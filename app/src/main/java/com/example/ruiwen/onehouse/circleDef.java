@@ -33,6 +33,7 @@ public class circleDef extends AppCompatActivity {
             }
         });
     }
+    //asdoifjasdiofj
     public void descText(){
         TextView desc = (TextView) findViewById(R.id.descText);
         Geometry geo = new Geometry();
