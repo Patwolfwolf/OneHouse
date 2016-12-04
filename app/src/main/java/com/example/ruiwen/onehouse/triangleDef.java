@@ -12,12 +12,12 @@ import android.widget.TextView;
 
 import static java.lang.Double.*;
 
-public class rectangleDef extends AppCompatActivity {
+public class triangleDef extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rectangle_def);
+        setContentView(R.layout.activity_triangle_def);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -35,7 +35,7 @@ public class rectangleDef extends AppCompatActivity {
     public void descText(){
         TextView desc = (TextView) findViewById(R.id.descText);
         Geometry geo = new Geometry();
-        desc.setText(geo.AreaRect());
+        desc.setText(geo.AreaTri());
     }
 
     public void clickButton(){
@@ -47,16 +47,17 @@ public class rectangleDef extends AppCompatActivity {
         calBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(area.length() == 0&&height.length() != 0 && base.length() != 0){
-                        area.setText(valueOf(geo.getAreaRect(valueOf(base.getText().toString()), valueOf(height.getText().toString()))).toString());
+                if(area.length() == 0 && height.length() != 0 && base.length() != 0){
+                        area.setText(valueOf(geo.getAreaTri(valueOf(base.getText().toString()), valueOf(height.getText().toString()))).toString());
                 }
                 if(height.length() == 0 && area.length() != 0 && base.length() != 0){
-                    height.setText(valueOf(geo.getHeightRect(valueOf(area.getText().toString()), valueOf(base.getText().toString()))).toString());
+                    height.setText(valueOf(geo.getHeightTri(valueOf(area.getText().toString()), valueOf(base.getText().toString()))).toString());
                 }
                 if(base.length() == 0 && area.length() != 0 && height.length() != 0){
-                    base.setText(valueOf(geo.getBaseRect(valueOf(area.getText().toString()), valueOf(height.getText().toString()))).toString());
+                    base.setText(valueOf(geo.getBaseTri(valueOf(area.getText().toString()), valueOf(height.getText().toString()))).toString());
                 }
             }
         });
     }
 }
+

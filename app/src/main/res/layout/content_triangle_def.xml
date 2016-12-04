@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/content_rectangle_def"
+    android:id="@+id/content_triangle_def"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -10,8 +10,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.ruiwen.onehouse.rectangleDef"
-    tools:showIn="@layout/activity_rectangle_def">
+    tools:context="com.example.ruiwen.onehouse.triangleDef"
+    tools:showIn="@layout/activity_triangle_def">
 
     <TableLayout
         android:layout_width="match_parent"
@@ -38,7 +38,7 @@
                     android:layout_column="1" />
 
                 <EditText
-                    android:layout_width="54dp"
+                    android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:inputType="number|numberSigned|numberDecimal"
                     android:ems="10"
@@ -64,62 +64,13 @@
                     android:layout_column="3" />
 
                 <EditText
-                    android:layout_width="67dp"
+                    android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:id="@+id/height"
                     android:layout_row="0"
                     android:layout_column="2"
                     tools:text="Height"
-                    android:inputType="number|numberSigned|numberDecimal"
-                    style="@android:style/Widget.EditText" />
-
-                <EditText
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:id="@+id/editText5"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_below="@+id/circum"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:selectAllOnFocus="false"
-                    android:layout_width="50dp"
-                    android:layout_row="0"
-                    android:layout_column="4"
-                    tools:text="Base"
-                    android:inputType="number|numberSigned|numberDecimal" />
-
-                <EditText
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:id="@+id/editText4"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_below="@+id/circum"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:selectAllOnFocus="false"
-                    android:layout_width="50dp"
-                    android:layout_row="0"
-                    android:layout_column="4"
-                    tools:text="Base"
-                    android:inputType="number|numberSigned|numberDecimal" />
-
-                <EditText
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:id="@+id/editText3"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_below="@+id/circum"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:selectAllOnFocus="false"
-                    android:layout_width="50dp"
-                    android:layout_row="0"
-                    android:layout_column="4"
-                    tools:text="Base"
                     android:inputType="number|numberSigned|numberDecimal" />
 
                 <EditText
@@ -132,13 +83,22 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:selectAllOnFocus="false"
-                    android:layout_width="50dp"
+                    android:layout_width="70dp"
                     android:layout_row="0"
                     android:layout_column="4"
                     tools:text="Base"
-                    android:inputType="number|numberSigned|numberDecimal"
-                    style="@android:style/Widget.EditText" />
+                    android:inputType="number|numberSigned|numberDecimal" />
+
+                <TextView
+                    android:text="/2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView5"
+                    android:textSize="20sp"
+                    android:textStyle="normal|bold"
+                    android:textColor="@android:color/black" />
             </GridLayout>
+
         </TableRow>
 
         <TableRow

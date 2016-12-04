@@ -15,7 +15,7 @@ public class Geometry {
 	public double getAreaRect(double base, double height){
 		return base * height;
 	}
-	public String AreaRect(){return "The area of the rectangle = base of triangle * height of triangle. ";}
+	public String AreaRect(){return "The area of the rectangle = base of rectangle * height of rectangle. ";}
 	/**
 	 * @param area of rectangle
 	 * @param height of rectangle
@@ -24,7 +24,7 @@ public class Geometry {
 	public double getBaseRect(double area, double height){
 		return area / height;
 	}
-	public String BaseRect(){return "The base of rectangle = area of triangle / height of triangle. ";}
+
 	
 	/**
 	 * @param area of rectangle 
@@ -43,7 +43,7 @@ public class Geometry {
 	public double getAreaTri(double base, double height){
 		return base * height / 2;
 	}
-	
+	public String AreaTri(){return "The area of the triangle = base of triangle * height of triangle / 2. ";}
 	/**
 	 * @param area of triangle
 	 * @param height of triangle
@@ -69,7 +69,7 @@ public class Geometry {
 	public double getAreaC(double radius){
 		return Math.PI * radius * radius;	
 	}
-	
+	public String AreaC(){return "The area of the circle = pi * radius ^ 2. ";}
 	/**
 	 * @param area of a circle
 	 * @return radius of a circle, with area known
@@ -86,7 +86,7 @@ public class Geometry {
 	public double getCircumC(double radius){
 		return 2 * radius * Math.PI;
 	}
-	
+	public String CircumC(){return "The circumference of a circle = 2 * radius * pi. ";}
 	/**
 	 * @param circumference	of a circle
 	 * @return	radius of a circle , with circumference known
@@ -105,7 +105,7 @@ public class Geometry {
 	public double getVolumeRS(double length, double width, double height){
 		return length * width * height;
 	}
-	
+	public String VolumeRS(){return "The volume of rectangular solid = width * height * length ";}
 	/**
 	 * @param volume of rectangular solid
 	 * @param width	of rectangular solid
@@ -145,7 +145,7 @@ public class Geometry {
 	public double getVolumeCy(double radius, double height){
 		return Math.PI * radius* radius * height;
 	}
-	
+	public String VolumeCy(){return "The volume of a cylinder = pi * radius^2 * height ";}
 	/**
 	 * @param volume of a cylinder
 	 * @param height of a cylinder
@@ -174,9 +174,8 @@ public class Geometry {
 	public double getSurfaceAreaCy(double radius, double height){
 		return 2* Math.PI* radius * height + 2 * getAreaC(radius);
 	}
-	
+	public String SurfaceAreaCy(){return "The surface area of a cylinder = 2 * pi * radius * height + 2 * pi * radius^2 ";}
 	/**
-	 * @param surfaceArea of a cylinder
 	 * @param height of a cylinder
 	 * @return radius of a cylinder with total surface area known
 	 */
@@ -185,7 +184,6 @@ public class Geometry {
 	}
 	
 	/**
-	 * @param surfaceArea of a cylinder
 	 * @param radius of a cylinder
 	 * @return height of a cylinder with total surface area known
 	 */
@@ -201,7 +199,7 @@ public class Geometry {
 	public double getVolumeS(double radius){
 		return 4 / 3 * Math.PI * radius * radius * radius;
 	}
-	
+	public String VolumeS(){return "The volume of a sphere = 4/3 * pi * radius^3 ";}
 	/**
 	 * @param volume of a sphere
 	 * @return radius of a sphere with volume known
@@ -218,8 +216,8 @@ public class Geometry {
 	public double getSurfaceAS(double radius){
 		return 4 * Math.PI  * radius * radius;
 	}
+	public String SurfaceAS(){return "The surface area of a sphere = 4 * pi * radius^2 ";}
 	/**
-	 * @param surfaceArea of a sphere
 	 * @return radius of a sphere with surface area given.
 	 */
 	public double getRadiusSS(double surfaceA){
@@ -229,5 +227,5 @@ public class Geometry {
 	public double getArchLength(double radius, double theta){
 		return 2* Math.PI * radius * theta / 360;
 	}
-
+	public String ArchLength(){return "The archlength  = 2 * PI * radius * theta(angle in degree) / 360 ";}
 }

@@ -12,12 +12,12 @@ import android.widget.TextView;
 
 import static java.lang.Double.*;
 
-public class rectangleDef extends AppCompatActivity {
+public class volumnRS extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rectangle_def);
+        setContentView(R.layout.activity_volumn_rs);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -35,26 +35,30 @@ public class rectangleDef extends AppCompatActivity {
     public void descText(){
         TextView desc = (TextView) findViewById(R.id.descText);
         Geometry geo = new Geometry();
-        desc.setText(geo.AreaRect());
+        desc.setText(geo.VolumeRS());
     }
 
     public void clickButton(){
         Button calBut = (Button) findViewById(R.id.button2);
-        final EditText area = (EditText) findViewById(R.id.area);
+        final EditText volumn = (EditText) findViewById(R.id.volumn);
         final EditText height = (EditText) findViewById(R.id.height);
-        final EditText base = (EditText) findViewById(R.id.base);
+        final EditText width = (EditText) findViewById(R.id.width);
+        final EditText length = (EditText) findViewById(R.id.length);
         final Geometry geo = new Geometry();
         calBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(area.length() == 0&&height.length() != 0 && base.length() != 0){
-                        area.setText(valueOf(geo.getAreaRect(valueOf(base.getText().toString()), valueOf(height.getText().toString()))).toString());
+                if(volumn.length() == 0 && height.length() != 0 && width.length() != 0 && length.length() != 0){
+                    volumn.setText(valueOf(geo.getVolumeRS(valueOf(length.getText().toString()), valueOf(width.getText().toString()), valueOf(height.getText().toString()))).toString());
                 }
-                if(height.length() == 0 && area.length() != 0 && base.length() != 0){
-                    height.setText(valueOf(geo.getHeightRect(valueOf(area.getText().toString()), valueOf(base.getText().toString()))).toString());
+                if(length.length() == 0 && height.length() != 0 && width.length() != 0 && volumn.length() != 0){
+                    length.setText(valueOf(geo.getLengthRS(valueOf(volumn.getText().toString()), valueOf(width.getText().toString()), valueOf(height.getText().toString()))).toString());
                 }
-                if(base.length() == 0 && area.length() != 0 && height.length() != 0){
-                    base.setText(valueOf(geo.getBaseRect(valueOf(area.getText().toString()), valueOf(height.getText().toString()))).toString());
+                if(width.length() == 0 && height.length() != 0 && length.length() != 0 && volumn.length() != 0){
+                    width.setText(valueOf(geo.getWidthRS(valueOf(volumn.getText().toString()), valueOf(length.getText().toString()), valueOf(height.getText().toString()))).toString());
+                }
+                if(height.length() == 0 && width.length() != 0 && length.length() != 0 && volumn.length() != 0){
+                    height.setText(valueOf(geo.getHeightRS(valueOf(volumn.getText().toString()), valueOf(width.getText().toString()), valueOf(length.getText().toString()))).toString());
                 }
             }
         });

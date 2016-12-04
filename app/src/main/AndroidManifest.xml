@@ -33,6 +33,30 @@
         <activity
             android:name=".rectangleDef"
             android:label="@string/title_activity_rectangle_def"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".triangleDef"
+            android:label="@string/title_activity_triangle_def"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".circleDef"
+            android:label="@string/title_activity_circle_def"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".circumC"
+            android:label="@string/title_activity_circum_c"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".volumnRS"
+            android:label="@string/title_activity_volumn_rs"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".volumnCy"
+            android:label="@string/title_activity_volumn_cy"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".surfaceAreaCy"
+            android:label="@string/title_activity_surface_area_cy"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

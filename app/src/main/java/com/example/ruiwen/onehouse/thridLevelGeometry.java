@@ -56,7 +56,27 @@ public class thridLevelGeometry extends AppCompatActivity {
                     startActivity(i);
                 }
                 if (position == 1){
-                    Intent i = new Intent(thridLevelGeometry.this, seconLevelPhysics.class);
+                    Intent i = new Intent(thridLevelGeometry.this, triangleDef.class);
+                    startActivity(i);
+                }
+                if (position == 2){
+                    Intent i = new Intent(thridLevelGeometry.this, circleDef.class);
+                    startActivity(i);
+                }
+                if (position == 3){
+                    Intent i = new Intent(thridLevelGeometry.this, circumC.class);
+                    startActivity(i);
+                }
+                if (position == 4){
+                    Intent i = new Intent(thridLevelGeometry.this, volumnRS.class);
+                    startActivity(i);
+                }
+                if (position == 5){
+                    Intent i = new Intent(thridLevelGeometry.this, volumnCy.class);
+                    startActivity(i);
+                }
+                if (position == 6){
+                    Intent i = new Intent(thridLevelGeometry.this, surfaceAreaCy.class);
                     startActivity(i);
                 }
             }

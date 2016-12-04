@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_surface_area_cy"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.ruiwen.onehouse.surfaceAreaCy"
+    tools:showIn="@layout/activity_surface_area_cy">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="="
+                    android:layout_width="wrap_content"
+                    android:layout_height="51dp"
+                    android:id="@+id/textView4"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:layout_below="@+id/circum"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/area"
+                    style="@android:style/Widget.EditText"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    tools:text="area"
+                    android:layout_width="60dp" />
+
+                <TextView
+                    android:text="  2Pi("
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sdiojf"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="normal|bold" />
+
+                <EditText
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/radius"
+                    android:inputType="number|numberSigned|numberDecimal"
+                    style="@android:style/Widget.EditText"
+                    tools:text="radius" />
+
+                <TextView
+                    android:text="*"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView14"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/height"
+                    android:inputType="number|numberSigned|numberDecimal"
+                    style="@android:style/Widget.EditText"
+                    android:layout_width="70dp" />
+
+                <TextView
+                    android:text="+"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView15"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:text="Radius"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rad"
+                    android:textSize="18sp"
+                    android:textStyle="normal|bold"
+                    android:layout_width="wrap_content" />
+
+                <TextView
+                    android:text="^"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView18"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:text="2)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView17"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="normal|bold" />
+
+            </GridLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="Calculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="165dp"
+                android:id="@+id/button2" />
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

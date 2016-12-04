@@ -9,4 +9,10 @@
     <string name="title_activity_secon_level_physics">seconLevelPhysics</string>
     <string name="title_activity_thrid_level_geometry">thridLevelGeometry</string>
     <string name="title_activity_rectangle_def">rectangleDef</string>
+    <string name="title_activity_triangle_def">triangleDef</string>
+    <string name="title_activity_circle_def">CircleDef</string>
+    <string name="title_activity_circum_c">circumC</string>
+    <string name="title_activity_volumn_rs">volumnRS</string>
+    <string name="title_activity_volumn_cy">volumnCy</string>
+    <string name="title_activity_surface_area_cy">surfaceAreaCy</string>
 </resources>
