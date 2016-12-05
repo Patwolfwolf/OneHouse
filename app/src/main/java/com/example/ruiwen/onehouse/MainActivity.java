@@ -4,9 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.KeyEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -25,18 +22,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.PrintStream;
-import java.io.Reader;
 import java.io.UnsupportedEncodingException;
-import java.nio.charset.StandardCharsets;
-
-import static android.R.id.button2;
-import static android.R.id.input;
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -68,19 +55,19 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        Button tbutton = (Button) findViewById(R.id.button);
+        Button tbutton = (Button) findViewById(R.id.tbutton);
         Button cbutton = (Button) findViewById(R.id.button3);
         cbutton.setOnClickListener(new View.OnClickListener() {
                                        @Override
                                        public void onClick(View v) {
-                                           EditText calT1 = (EditText) findViewById(R.id.calText1);
+                                           EditText calT1 = (EditText) findViewById(R.id.editText2);
                                             calT1.setText("\n");
                                        }
         });
         tbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText calT1 = (EditText) findViewById(R.id.calText1);
+                EditText calT1 = (EditText) findViewById(R.id.editText2);
                 try {
                     InputStream stream = new ByteArrayInputStream(calT1.getText().toString().getBytes("UTF-8"));
                     Calculator parser = new Calculator(stream );
@@ -124,8 +111,8 @@ public class MainActivity extends AppCompatActivity
 //    }
 
     public void testButton(View a){
-        if (a.getId() == R.id.button){
-            EditText calT1 = (EditText) findViewById(R.id.calText1);
+        if (a.getId() == R.id.tbutton){
+            EditText calT1 = (EditText) findViewById(R.id.tbutton);
             try {
                 InputStream stream = new ByteArrayInputStream(calT1.getText().toString().getBytes("UTF-8"));
                 Calculator parser = new Calculator(stream );
