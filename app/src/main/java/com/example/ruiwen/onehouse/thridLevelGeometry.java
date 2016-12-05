@@ -13,8 +13,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static android.R.id.list;
-
 public class thridLevelGeometry extends AppCompatActivity {
 
     @Override
