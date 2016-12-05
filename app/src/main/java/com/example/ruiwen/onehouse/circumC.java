@@ -41,7 +41,7 @@ public class circumC extends AppCompatActivity {
 
     public void clickButton(){
         Button calBut = (Button) findViewById(R.id.button2);
-        final EditText circum = (EditText) findViewById(R.id.circum);;
+        final EditText circum = (EditText) findViewById(R.id.circum);
         final EditText radius = (EditText) findViewById(R.id.radius);
         final Geometry geo = new Geometry();
         calBut.setOnClickListener(new View.OnClickListener() {
