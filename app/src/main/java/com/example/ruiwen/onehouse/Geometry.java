@@ -227,5 +227,12 @@ public class Geometry {
 	public double getArchLength(double radius, double theta){
 		return 2* Math.PI * radius * theta / 360;
 	}
+	public double getRadiusAL(double theta, double Arclength){
+		return Arclength * 360 / (2 * Math.PI * theta);
+	}
+
+	public double getThetaAL(double radius, double Arclength){
+		return Arclength * 360 /(2* Math.PI * radius);
+	}
 	public String ArchLength(){return "The archlength  = 2 * PI * radius * theta(angle in degree) / 360 ";}
 }

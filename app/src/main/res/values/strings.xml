@@ -17,4 +17,7 @@
     <string name="title_activity_surface_area_cy">surfaceAreaCy</string>
     <string name="title_activity_third_level_electricity">thirdLevelElectricity</string>
     <string name="title_activity_third_level_machnics">thirdLevelMachnics</string>
+    <string name="title_activity_volume_s">volumeS</string>
+    <string name="title_activity_surface_area_as">surfaceAreaAS</string>
+    <string name="title_activity_arc_length">ArcLength</string>
 </resources>

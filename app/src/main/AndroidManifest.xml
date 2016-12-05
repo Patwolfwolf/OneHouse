@@ -65,6 +65,18 @@
         <activity
             android:name=".thirdLevelMachnics"
             android:label="@string/title_activity_third_level_machnics"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".volumeS"
+            android:label="@string/title_activity_volume_s"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".surfaceAreaAS"
+            android:label="@string/title_activity_surface_area_as"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ArcLength"
+            android:label="@string/title_activity_arc_length"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
