@@ -54,7 +54,7 @@ public class thirdLevelMachnics extends AppCompatActivity {
                 "acceleration by changed velocity and changed time", "force by mass and acceleration",
                 "work by force, distance and theta", "energy of Kinetic by mass and velocity",
                 "energy of Potential by mass, highet changed and gravitation", "power by force and velocity",
-                "power by changed work and changed time", "efficient by output and input"};
+               2 "power by changed work and changed time", "efficient by output and input"};
         ArrayAdapter<String> list = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1,mainList);
         ListView list1 = (ListView) findViewById(R.id.list01);
