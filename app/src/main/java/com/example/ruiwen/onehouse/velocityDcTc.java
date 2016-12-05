@@ -12,12 +12,13 @@ import android.widget.TextView;
 
 import static java.lang.Double.*;
 
-public class rectangleDef extends AppCompatActivity {
+
+public class velocityDcTc extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rectangle_def);
+        setContentView(R.layout.activity_velocity_dc_tc);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         descText();
@@ -34,29 +35,30 @@ public class rectangleDef extends AppCompatActivity {
 
     public void descText(){
         TextView desc = (TextView) findViewById(R.id.descText);
-        Geometry geo = new Geometry();
-        desc.setText(geo.AreaRect());
+        Mechanics mac = new Mechanics();
+        desc.setText(mac.velocity());
     }
 
     public void clickButton(){
-        Button calBut = (Button) findViewById(R.id.button2);
-        final EditText area = (EditText) findViewById(R.id.area);
-        final EditText height = (EditText) findViewById(R.id.height);
-        final EditText base = (EditText) findViewById(R.id.base);
-        final Geometry geo = new Geometry();
+        Button calBut = (Button) findViewById(R.id.button10);
+        final EditText Velocity = (EditText) findViewById(R.id.velocity);
+        final EditText TimeChanged = (EditText) findViewById(R.id.TimeChanged);
+        final EditText DistanceChanged = (EditText) findViewById(R.id.DistanceChanged);
+        final Mechanics mac = new Mechanics();
         calBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(area.length() == 0&&height.length() != 0 && base.length() != 0){
-                        area.setText(valueOf(geo.getAreaRect(valueOf(base.getText().toString()), valueOf(height.getText().toString()))).toString());
+                if(Velocity.length() == 0 && TimeChanged.length() != 0 && DistanceChanged.length() != 0){
+                    Velocity.setText(valueOf(mac.getVeloctiy(valueOf(DistanceChanged.getText().toString()), valueOf(TimeChanged.getText().toString()))).toString());
                 }
-                if(height.length() == 0 && area.length() != 0 && base.length() != 0){
-                    height.setText(valueOf(geo.getHeightRect(valueOf(area.getText().toString()), valueOf(base.getText().toString()))).toString());
+                if(Velocity.length() != 0 && TimeChanged.length() == 0 && DistanceChanged.length() != 0){
+                    TimeChanged.setText(valueOf(mac.getChangeTime(valueOf(Velocity.getText().toString()), valueOf(DistanceChanged.getText().toString()))).toString());
                 }
-                if(base.length() == 0 && area.length() != 0 && height.length() != 0){
-                    base.setText(valueOf(geo.getBaseRect(valueOf(area.getText().toString()), valueOf(height.getText().toString()))).toString());
+                if(Velocity.length() != 0 && TimeChanged.length() != 0 && DistanceChanged.length() == 0){
+                    DistanceChanged.setText(valueOf(mac.getChangeDistance(valueOf(Velocity.getText().toString()), valueOf(TimeChanged.getText().toString()))).toString());
                 }
             }
         });
     }
+
 }

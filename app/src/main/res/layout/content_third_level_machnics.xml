@@ -13,4 +13,8 @@
     tools:context="com.example.ruiwen.onehouse.thirdLevelMachnics"
     tools:showIn="@layout/activity_third_level_machnics">
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list01" />
 </RelativeLayout>

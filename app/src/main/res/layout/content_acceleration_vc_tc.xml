@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_acceleration_vc_tc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.ruiwen.onehouse.accelerationVcTc"
+    tools:showIn="@layout/activity_acceleration_vc_tc">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/acceleration"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    style="@android:style/Widget.EditText"
+                    tools:text="acceleration" />
+
+                <TextView
+                    android:text="="
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView26" />
+
+                <EditText
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/velocityChanged"
+                    style="@android:style/Widget.EditText"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    tools:text="changed velocity" />
+
+                <TextView
+                    android:text="/"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView27" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/timeChanged"
+                    style="@android:style/Widget.EditText"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    tools:text="changed time" />
+            </GridLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/descText" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:text="Calculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button6" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+</RelativeLayout>
