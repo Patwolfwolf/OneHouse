@@ -10,14 +10,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class Average extends AppCompatActivity {
+public class sd extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_average);
+        setContentView(R.layout.activity_sd);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,27 +27,33 @@ public class Average extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        Button but = (Button) findViewById(R.id.button);
+        Button but = (Button) findViewById(R.id.button4);
         but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                average();
+                variance();
             }
         });
+
     }
-    public void average(){
-        EditText text = (EditText) findViewById(R.id.editText);
+
+    private void variance() {
+        EditText text = (EditText) findViewById(R.id.editText6);
         String string = text.getText().toString();
-        int sum = 0;
+        double sum = 0;
         int count = 0;
         String[] args=string.trim().split(" ");
         for (int i = 0; i < args.length; i++) {
             sum += Integer.valueOf(args[i]);
         }
         double average = sum/args.length;
-        TextView answer = (TextView) findViewById(R.id.textView3);
-        answer.setText(average + "");
-    }
+        sum = 0;
+        for (int i = 0; i < args.length;i++){
+            sum = Integer.valueOf(args[i]) - average;
+        }
+        TextView answer = (TextView) findViewById(R.id.textView13);
+        answer.setText("Variance: " + sum + " Standard Deviation: " + Math.sqrt(sum) );
 
+    }
 
 }

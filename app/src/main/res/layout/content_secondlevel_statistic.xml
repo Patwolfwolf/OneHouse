@@ -13,4 +13,10 @@
     tools:context="com.example.ruiwen.onehouse.secondlevelStatistic"
     tools:showIn="@layout/activity_secondlevel_statistic">
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/sclist" />
 </RelativeLayout>

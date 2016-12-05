@@ -129,6 +129,10 @@
         <activity
             android:name=".Average"
             android:label="@string/title_activity_average"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".sd"
+            android:label="@string/title_activity_sd"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

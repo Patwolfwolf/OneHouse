@@ -55,6 +55,10 @@ public class secondLevel extends AppCompatActivity {
                     Intent i = new Intent(secondLevel.this, thridLevelGeometry.class);
                     startActivity(i);
                 }
+                if (position == 1){
+                    Intent i = new Intent(secondLevel.this, secondlevelStatistic.class);
+                    startActivity(i);
+                }
             }
         });
     }

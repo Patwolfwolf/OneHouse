@@ -54,7 +54,7 @@ public class secondlevelStatistic extends AppCompatActivity {
                     startActivity(i);
                 }
                 if (position == 1){
-                    Intent i = new Intent(secondlevelStatistic.this, thirdLevelMachnics.class);
+                    Intent i = new Intent(secondlevelStatistic.this, sd.class);
                     startActivity(i);
                 }
             }
