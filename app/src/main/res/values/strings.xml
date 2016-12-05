@@ -31,4 +31,6 @@
     <string name="title_activity_volume_s">volumeS</string>
     <string name="title_activity_surface_area_as">surfaceAreaAS</string>
     <string name="title_activity_arc_length">ArcLength</string>
+    <string name="title_activity_secondlevel_statistic">secondlevelStatistic</string>
+    <string name="title_activity_average">Average</string>
 </resources>
