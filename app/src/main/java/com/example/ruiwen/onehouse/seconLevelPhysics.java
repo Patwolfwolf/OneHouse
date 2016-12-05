@@ -33,7 +33,7 @@ public class seconLevelPhysics extends AppCompatActivity {
         });
     }
 
-
+//aa
     public void mainList(){
         String[] mainList = {"Electricity ","Mechanic"};
         ArrayAdapter<String> list = new ArrayAdapter<String>(this,
