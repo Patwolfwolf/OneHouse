@@ -53,7 +53,7 @@
         android:id="@+id/editText2"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:singleLine="false"
-        tools:text="Calculator"
+        tools:text="Calculator!"
         android:layout_below="@+id/text01"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
