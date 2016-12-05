@@ -15,4 +15,6 @@
     <string name="title_activity_volumn_rs">volumnRS</string>
     <string name="title_activity_volumn_cy">volumnCy</string>
     <string name="title_activity_surface_area_cy">surfaceAreaCy</string>
+    <string name="title_activity_third_level_electricity">thirdLevelElectricity</string>
+    <string name="title_activity_third_level_machnics">thirdLevelMachnics</string>
 </resources>

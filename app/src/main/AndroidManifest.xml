@@ -57,6 +57,14 @@
         <activity
             android:name=".surfaceAreaCy"
             android:label="@string/title_activity_surface_area_cy"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".thirdLevelElectricity"
+            android:label="@string/title_activity_third_level_electricity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".thirdLevelMachnics"
+            android:label="@string/title_activity_third_level_machnics"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
