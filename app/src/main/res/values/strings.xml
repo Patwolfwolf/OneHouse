@@ -28,4 +28,7 @@
     <string name="title_activity_power2">Power2</string>
     <string name="title_activity_ac">AC</string>
     <string name="title_activity_av">AV</string>
+    <string name="title_activity_volume_s">volumeS</string>
+    <string name="title_activity_surface_area_as">surfaceAreaAS</string>
+    <string name="title_activity_arc_length">ArcLength</string>
 </resources>
