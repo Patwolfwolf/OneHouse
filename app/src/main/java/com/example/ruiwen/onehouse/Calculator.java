@@ -4,11 +4,9 @@ import java.io.StringReader;
 import java.io.Reader;
 import java.util.Scanner;
 
-import static javax.xml.datatype.DatatypeConstants.EQUAL;
-
 public class Calculator implements CalculatorConstants {
     double previousValue = 0.0 ;
-//test
+
   final public double Start() throws ParseException, NumberFormatException {
     label_1:
     while (true) {
@@ -31,7 +29,6 @@ public class Calculator implements CalculatorConstants {
         break label_1;
       }
       previousValue = Expression();
-      jj_consume_token(EOL);
           {if (true) return previousValue;}
     }
     jj_consume_token(0);
