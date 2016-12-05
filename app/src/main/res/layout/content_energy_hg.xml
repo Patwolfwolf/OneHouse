@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_energy_hg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.ruiwen.onehouse.energyHG"
+    tools:showIn="@layout/activity_energy_hg">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="127dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/energy"
+                    tools:text="energy of Potential"
+                    android:inputType="number|numberSigned|numberDecimal"
+                    style="@android:style/Widget.EditText"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <TextView
+                    android:text="="
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView57" />
+
+                <EditText
+                    android:layout_width="42dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/mass"
+                    style="@android:style/Widget.EditText"
+                    tools:text="mass"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <TextView
+                    android:text="*"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView58" />
+
+                <EditText
+                    android:layout_width="102dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/height"
+                    tools:text="height changed"
+                    style="@android:style/Widget.EditText"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <TextView
+                    android:text="*"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView59" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/gravitation"
+                    style="@android:style/Widget.EditText"
+                    tools:text="gravitation"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+            </GridLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/descText" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:text="Calculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button13" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+
+</RelativeLayout>

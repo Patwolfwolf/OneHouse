@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_power_fv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.ruiwen.onehouse.powerFV"
+    tools:showIn="@layout/activity_power_fv">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="61dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/power"
+                    tools:text="power"
+                    style="@android:style/Widget.EditText" />
+
+                <TextView
+                    android:text="="
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView60" />
+
+                <EditText
+                    android:layout_width="53dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/force"
+                    tools:text="force"
+                    style="@android:style/Widget.EditText" />
+
+                <TextView
+                    android:text="/"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView61" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/velocity"
+                    tools:text="velocity"
+                    style="@android:style/Widget.EditText" />
+
+            </GridLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/descText" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:text="Calculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button14" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

@@ -65,6 +65,70 @@
         <activity
             android:name=".thirdLevelMachnics"
             android:label="@string/title_activity_third_level_machnics"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".momentFD"
+            android:label="@string/title_activity_moment_fd"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".velocityDcTc"
+            android:label="@string/title_activity_velocity_dc_tc"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".velocityIVAT"
+            android:label="@string/title_activity_velocity_ivat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".velocitySquare"
+            android:label="@string/title_activity_velocity_square"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".accelerationVcTc"
+            android:label="@string/title_activity_acceleration_vc_tc"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".distanceIVVT"
+            android:label="@string/title_activity_distance_ivvt"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".distanceIVAT"
+            android:label="@string/title_activity_distance_ivat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".forceMA"
+            android:label="@string/title_activity_force_m"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".workFDC"
+            android:label="@string/title_activity_work_fdc"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".energyMV"
+            android:label="@string/title_activity_energy_mv"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".energyHG"
+            android:label="@string/title_activity_energy_hg"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".powerFV"
+            android:label="@string/title_activity_power_fv"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".powerWcTc"
+            android:label="@string/title_activity_energy_wc_tc"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".efficientUopIp"
+            android:label="@string/title_activity_efficient_uop_ip"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

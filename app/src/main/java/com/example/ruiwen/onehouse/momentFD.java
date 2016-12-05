@@ -12,14 +12,15 @@ import android.widget.TextView;
 
 import static java.lang.Double.*;
 
-public class rectangleDef extends AppCompatActivity {
+public class momentFD extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rectangle_def);
+        setContentView(R.layout.activity_moment_fd);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         descText();
         clickButton();
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -34,29 +35,30 @@ public class rectangleDef extends AppCompatActivity {
 
     public void descText(){
         TextView desc = (TextView) findViewById(R.id.descText);
-        Geometry geo = new Geometry();
-        desc.setText(geo.AreaRect());
+        Mechanics mac = new Mechanics();
+        desc.setText(mac.moment());
     }
 
     public void clickButton(){
-        Button calBut = (Button) findViewById(R.id.button2);
-        final EditText area = (EditText) findViewById(R.id.area);
-        final EditText height = (EditText) findViewById(R.id.height);
-        final EditText base = (EditText) findViewById(R.id.base);
-        final Geometry geo = new Geometry();
+        Button calBut = (Button) findViewById(R.id.button3);
+        final EditText Moment = (EditText) findViewById(R.id.Moment);;
+        final EditText Distance = (EditText) findViewById(R.id.Distance);
+        final EditText Force = (EditText) findViewById(R.id.Force);
+        final Mechanics mac = new Mechanics();
         calBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(area.length() == 0&&height.length() != 0 && base.length() != 0){
-                        area.setText(valueOf(geo.getAreaRect(valueOf(base.getText().toString()), valueOf(height.getText().toString()))).toString());
+                if(Moment.length() == 0 && Distance.length() != 0 && Force.length() != 0){
+                    Moment.setText(valueOf(mac.getMoments(valueOf(Force.getText().toString()), valueOf(Distance.getText().toString()))).toString());
                 }
-                if(height.length() == 0 && area.length() != 0 && base.length() != 0){
-                    height.setText(valueOf(geo.getHeightRect(valueOf(area.getText().toString()), valueOf(base.getText().toString()))).toString());
+                if(Moment.length() != 0 && Distance.length() == 0 && Force.length() != 0){
+                    Distance.setText(valueOf(mac.getDistance(valueOf(Moment.getText().toString()), valueOf(Force.getText().toString()))).toString());
                 }
-                if(base.length() == 0 && area.length() != 0 && height.length() != 0){
-                    base.setText(valueOf(geo.getBaseRect(valueOf(area.getText().toString()), valueOf(height.getText().toString()))).toString());
+                if(Moment.length() != 0 && Distance.length() != 0 && Force.length() == 0){
+                    Force.setText(valueOf(mac.getForce(valueOf(Moment.getText().toString()), valueOf(Distance.getText().toString()))).toString());
                 }
             }
         });
     }
+
 }

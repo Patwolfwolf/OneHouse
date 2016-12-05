@@ -10,18 +10,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import static java.lang.Double.*;
+import static java.lang.Double.valueOf;
 
-public class rectangleDef extends AppCompatActivity {
+public class powerWcTc extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rectangle_def);
+        setContentView(R.layout.activity_power_wc_tc);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         descText();
         clickButton();
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,29 +35,31 @@ public class rectangleDef extends AppCompatActivity {
 
     public void descText(){
         TextView desc = (TextView) findViewById(R.id.descText);
-        Geometry geo = new Geometry();
-        desc.setText(geo.AreaRect());
+        Mechanics mac = new Mechanics();
+        desc.setText(mac.power2());
     }
 
+
     public void clickButton(){
-        Button calBut = (Button) findViewById(R.id.button2);
-        final EditText area = (EditText) findViewById(R.id.area);
-        final EditText height = (EditText) findViewById(R.id.height);
-        final EditText base = (EditText) findViewById(R.id.base);
-        final Geometry geo = new Geometry();
+        Button calBut = (Button) findViewById(R.id.button15);
+        final EditText power = (EditText) findViewById(R.id.power);;
+        final EditText time = (EditText) findViewById(R.id.time);
+        final EditText work = (EditText) findViewById(R.id.work);
+        final Mechanics mac = new Mechanics();
         calBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(area.length() == 0&&height.length() != 0 && base.length() != 0){
-                        area.setText(valueOf(geo.getAreaRect(valueOf(base.getText().toString()), valueOf(height.getText().toString()))).toString());
+                if(power.length() == 0 && time.length() != 0 && work.length() != 0){
+                    power.setText(valueOf(mac.getPower1(valueOf(work.getText().toString()), valueOf(time.getText().toString()))).toString());
                 }
-                if(height.length() == 0 && area.length() != 0 && base.length() != 0){
-                    height.setText(valueOf(geo.getHeightRect(valueOf(area.getText().toString()), valueOf(base.getText().toString()))).toString());
+                if(power.length() != 0 && time.length() == 0 && work.length() != 0){
+                    time.setText(valueOf(mac.getChangeWork(valueOf(power.getText().toString()), valueOf(work.getText().toString()))).toString());
                 }
-                if(base.length() == 0 && area.length() != 0 && height.length() != 0){
-                    base.setText(valueOf(geo.getBaseRect(valueOf(area.getText().toString()), valueOf(height.getText().toString()))).toString());
+                if(power.length() != 0 && time.length() != 0 && work.length() == 0){
+                    work.setText(valueOf(mac.getChangeTime3(valueOf(power.getText().toString()), valueOf(time.getText().toString()))).toString());
                 }
             }
         });
     }
+
 }
