@@ -13,8 +13,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static android.R.id.list;
-
 public class thridLevelGeometry extends AppCompatActivity {
 
     @Override
@@ -35,7 +33,8 @@ public class thridLevelGeometry extends AppCompatActivity {
         });
     }
     public void mainList(){
-        String[] mainList = {"Area of Rectangle","Area of Triangle","Area of Circle", "Circumference of a Circle", "Volume of Rectangle Solid", "Volume of Cylinder", "Surface area of Cylinder", "Volume of a Sphere"};
+        String[] mainList = {"Area of Rectangle","Area of Triangle","Area of Circle", "Circumference of a Circle", "Volume of Rectangle Solid", "Volume of Cylinder", "Surface area of Cylinder",
+                "Volume of a Sphere", "Surface Area of a Sphere", "Arclength"};
         ArrayAdapter<String> list = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1,mainList);
         ListView list1 = (ListView) findViewById(R.id.list03);
@@ -79,6 +78,19 @@ public class thridLevelGeometry extends AppCompatActivity {
                     Intent i = new Intent(thridLevelGeometry.this, surfaceAreaCy.class);
                     startActivity(i);
                 }
+                if (position == 7){
+                    Intent i = new Intent(thridLevelGeometry.this, volumeS.class);
+                    startActivity(i);
+                }
+                if (position == 8){
+                    Intent i = new Intent(thridLevelGeometry.this, surfaceAreaAS.class);
+                    startActivity(i);
+                }
+                if (position == 9){
+                    Intent i = new Intent(thridLevelGeometry.this, ArcLength.class);
+                    startActivity(i);
+                }
+
             }
         });
     }

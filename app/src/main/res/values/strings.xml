@@ -31,4 +31,20 @@
     <string name="title_activity_power_fv">powerFV</string>
     <string name="title_activity_energy_wc_tc">energyWcTc</string>
     <string name="title_activity_efficient_uop_ip">efficientUopIp</string>
+    <string name="title_activity_charge_current_time">ChargeCurrentTime</string>
+    <string name="title_activity_voltage_work_charge">VoltageWorkCharge</string>
+    <string name="title_activity_ohms_law">OhmsLaw</string>
+    <string name="title_activity_emf">EMF</string>
+    <string name="title_activity_emf2">EMF2</string>
+    <string name="title_activity_resisitivity">Resisitivity</string>
+    <string name="title_activity_resistivity">Resistivity</string>
+    <string name="title_activity_power">Power</string>
+    <string name="title_activity_power2">Power2</string>
+    <string name="title_activity_ac">AC</string>
+    <string name="title_activity_av">AV</string>
+    <string name="title_activity_volume_s">volumeS</string>
+    <string name="title_activity_surface_area_as">surfaceAreaAS</string>
+    <string name="title_activity_arc_length">ArcLength</string>
+    <string name="title_activity_secondlevel_statistic">secondlevelStatistic</string>
+    <string name="title_activity_average">Average</string>
 </resources>
