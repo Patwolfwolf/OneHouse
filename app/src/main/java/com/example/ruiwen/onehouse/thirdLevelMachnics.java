@@ -14,17 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.common.api.GoogleApiClient;
-
-
 public class thirdLevelMachnics extends AppCompatActivity {
-
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    private GoogleApiClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +32,7 @@ public class thirdLevelMachnics extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
-
     public void mainList(){
         String[] mainList = {"Moment by force and distance", "Velocity by changed time and changed distance",
                 "Velocity by initial velocity, acceleration and time", "velocity's square by initial velocity's square, acceleration and time ",
@@ -54,7 +40,7 @@ public class thirdLevelMachnics extends AppCompatActivity {
                 "acceleration by changed velocity and changed time", "force by mass and acceleration",
                 "work by force, distance and theta", "energy of Kinetic by mass and velocity",
                 "energy of Potential by mass, highet changed and gravitation", "power by force and velocity",
-               2 "power by changed work and changed time", "efficient by output and input"};
+               "power by changed work and changed time", "efficient by output and input"};
         ArrayAdapter<String> list = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1,mainList);
         ListView list1 = (ListView) findViewById(R.id.list01);
