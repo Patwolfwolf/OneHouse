@@ -10,15 +10,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class sd extends AppCompatActivity {
+import java.util.Arrays;
+
+import static android.R.attr.max;
+import static com.example.ruiwen.onehouse.R.mipmap.average;
+
+public class interquartile extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sd);
+        setContentView(R.layout.activity_interquartile);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,34 +31,36 @@ public class sd extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        Button but = (Button) findViewById(R.id.button4);
+        Button but = (Button) findViewById(R.id.button17);
         but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                variance();
+                max();
             }
         });
 
     }
 
-    private void variance() {
-        EditText text = (EditText) findViewById(R.id.editText6);
+
+    public void max() {
+        EditText text = (EditText) findViewById(R.id.editText7);
         if (text.length() != 0) {
             String string = text.getText().toString();
-            double sum = 0;
             String[] args = string.trim().split(" ");
+            double[] array = new double[args.length];
             for (int i = 0; i < args.length; i++) {
-                sum += Double.valueOf(args[i]);
+                array[i] = Double.valueOf(args[i]);
             }
-            double average = sum / args.length;
-            double sumDiff = 0;
-            for (int i = 0; i < args.length; i++) {
-                sumDiff += (Double.valueOf(args[i]) - average) * (Double.valueOf(args[i]) - average);
-            }
-            TextView answer = (TextView) findViewById(R.id.textView13);
-            double var = sumDiff/args.length;
-            answer.setText("Variance: " +var  + " \nStandard Deviation: " + Math.sqrt(var));
-
+            Arrays.sort(array);
+            double first = array[(array.length-1) / 4];
+            double third = array[(array.length-1) * 3 / 4];
+            TextView answer = (TextView) findViewById(R.id.textView67);
+            answer.setText("Maximum: " + array[array.length - 1] + "\nMinimum: " + array[0] + "\nThe first quartile: " + array[(array.length - 1) / 4]
+                    + "\nThe third quartile: " + array[(array.length -1) * 3 / 4] + "\nThe interquartile Range: " + (third - first) + "\n The Median: "
+                    + array[(array.length-1)/2]  );
+            TextView sort = (TextView) findViewById(R.id.textView68);
+            sort.setText("" + Arrays.toString(array));
         }
     }
+
 }

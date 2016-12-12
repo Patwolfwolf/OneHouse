@@ -34,19 +34,20 @@ public class Average extends AppCompatActivity {
             }
         });
     }
-    public void average(){
+    public void average() {
         EditText text = (EditText) findViewById(R.id.editText);
-        String string = text.getText().toString();
-        int sum = 0;
-        int count = 0;
-        String[] args=string.trim().split(" ");
-        for (int i = 0; i < args.length; i++) {
-            sum += Integer.valueOf(args[i]);
+        if (text.length() != 0) {
+            String string = text.getText().toString();
+            int sum = 0;
+            int count = 0;
+             String[] args = string.trim().split(" ");
+            for (int i = 0; i < args.length; i++) {
+                sum += Double.valueOf(args[i]);
+            }
+            double average = sum / args.length;
+            TextView answer = (TextView) findViewById(R.id.textView3);
+            answer.setText(average + "");
         }
-        double average = sum/args.length;
-        TextView answer = (TextView) findViewById(R.id.textView3);
-        answer.setText(average + "");
+
     }
-
-
 }

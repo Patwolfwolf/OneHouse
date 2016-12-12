@@ -13,6 +13,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static android.R.id.list;
+
 public class secondlevelStatistic extends AppCompatActivity {
 
     @Override
@@ -33,7 +35,8 @@ public class secondlevelStatistic extends AppCompatActivity {
         });
     }
     public void mainList(){
-        String[] mainList = {"Average ","Variance"};
+        String[] mainList = {"Find Arithmetic Mean ","Find Variance", "Basic Probability Distributions" ,
+                "Find Interquartile range", "Z-score"};
         ArrayAdapter<String> list = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1,mainList);
         ListView list1 = (ListView) findViewById(R.id.sclist);
@@ -55,6 +58,18 @@ public class secondlevelStatistic extends AppCompatActivity {
                 }
                 if (position == 1){
                     Intent i = new Intent(secondlevelStatistic.this, sd.class);
+                    startActivity(i);
+                }
+                if (position == 2){
+                    Intent i = new Intent(secondlevelStatistic.this, Probability.class);
+                    startActivity(i);
+                }
+                if (position == 3){
+                    Intent i = new Intent(secondlevelStatistic.this, interquartile.class);
+                    startActivity(i);
+                }
+                if (position == 4){
+                    Intent i = new Intent(secondlevelStatistic.this, ttest.class);
                     startActivity(i);
                 }
             }

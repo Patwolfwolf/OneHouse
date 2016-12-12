@@ -48,4 +48,8 @@
     <string name="title_activity_secondlevel_statistic">secondlevelStatistic</string>
     <string name="title_activity_average">Average</string>
     <string name="title_activity_sd">sd</string>
+    <string name="title_activity_probability">Probability</string>
+    <string name="title_activity_bionomialand_poisson">BionomialandPoisson</string>
+    <string name="title_activity_interquartile">interquartile</string>
+    <string name="title_activity_ttest">ttest</string>
 </resources>

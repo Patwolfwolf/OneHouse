@@ -129,7 +129,7 @@
         <activity
             android:name=".efficientUopIp"
             android:label="@string/title_activity_efficient_uop_ip"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".volumeS"
             android:label="@string/title_activity_volume_s"
@@ -197,6 +197,22 @@
         <activity
             android:name=".sd"
             android:label="@string/title_activity_sd"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Probability"
+            android:label="@string/title_activity_probability"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BionomialandPoisson"
+            android:label="@string/title_activity_bionomialand_poisson"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".interquartile"
+            android:label="@string/title_activity_interquartile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ttest"
+            android:label="@string/title_activity_ttest"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
